@@ -28,12 +28,32 @@ twitter_username:
 github_username:  endoman123
 
 # Build settings
-theme: minima
 plugins:
+  - jekyll-paginate-v2
   - jekyll-feed
-
 sass:
   sass_dir: 'assets/css'
+
+# Pagination configuration
+pagination:
+  enabled: true
+  debug: true
+  per_page: 10
+  offset: 0
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# Default Front Matter
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -45,11 +65,10 @@ sass:
 #
 exclude:
   - Makefile
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
+  - Gemfile
+  - Gemfile.lock
+  - .sass-cache/
+  - .jekyll-cache/
 #   - node_modules/
 #   - vendor/bundle/
 #   - vendor/cache/
