@@ -9,16 +9,20 @@ pagination:
 <div class="d-flex flex-wrap">
   {% for post in paginator.posts %}
   <div class="col-lg-4 col-md-6 col-xs-12 p-1">
-    <a href="{{ post.url }}" class="card h-100">
+    <div class="card">
+      <img class="card-img" />
       <div class="card-body">
-        <h4>{{ post.title }}</h1>
-          {% if post.description %}
-            <p>{{ post.description }}</p>
-          {% else %}
-            <p>{{ post.excerpt }}</p>
-          {% endif %}
+        <a href="{{ post.url }}" class="h4 stretched-link text-dark">{{ post.title }}</a>
+        {% if post.description %}
+          <p>{{ post.description }}</p>
+        {% else %}
+          <p>{{ post.excerpt }}</p>
+        {% endif %}
       </div>
-    </a>
+      <div class="card-footer">
+        <small class="text-muted"><i class="fas fa-clock"></i> {{ post.date | date: '%B %d, %Y' }}</small>
+      </div>
+    </div>
   </div>
   {% endfor %}
 </div>
