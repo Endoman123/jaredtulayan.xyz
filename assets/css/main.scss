@@ -1,9 +1,15 @@
 ---
-# Front matter block 
+# Front matter block
+# This is just to tell jekyll to compile this scss file
 ---
 
+// Bootstrap overrides
 @import 'mixins/overrides/variables';
+
+// Base Bootstrap
 @import 'bootstrap/bootstrap';
+
+// Custom stylings
 @import 'mixins/base';
 @import 'mixins/flex';
 @import 'mixins/hero';
