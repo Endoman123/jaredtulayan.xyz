@@ -1,7 +1,7 @@
 <nav class="p-0 navbar navbar-expand-lg fixed-top navbar-light">
   <div class="container p-0 bg-dark">
     <a class="navbar-brand bg-primary link-unstyled px-2" href="/">{{ site.title }}</a>
-    <p class="my-auto flex-grow-1" id="breadcrumbs">
+    <p class="my-auto d-none d-sm-block flex-grow-1" id="breadcrumbs">
       <a href="/" aria-label="Home"><i class="fas fa-home"></i></a>
       {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
       {% for crumb in crumbs offset: 1 %}
