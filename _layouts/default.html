@@ -12,7 +12,7 @@ layout: base
     <p class="lead">{{ page.description }}</p>
   {% endif %}
   {% if page.date %}
-    <small class="text-muted"><i class="fas fa-clock"></i> {{ page.date | date: '%Y-%m-%d' }}</small>
+    <p class="text-muted"><i class="fas fa-clock"></i> {{ page.date | date: '%Y-%m-%d' }}</p>
   {% endif %}
   <hr class="separator-strong">
 </div>
