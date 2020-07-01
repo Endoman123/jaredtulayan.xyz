@@ -1,6 +1,18 @@
-<nav class="py-3 navbar navbar-expand-lg fixed-top auto-hiding-navbar navbar-light">
-  <div class="container">
-    <a class="navbar-brand" href="/">Logo</a>
+<nav class="p-0 navbar navbar-expand-lg fixed-top navbar-light">
+  <div class="container p-0 bg-dark">
+    <a class="navbar-brand bg-primary link-unstyled px-2" href="/">{{ site.title }}</a>
+    <p class="my-auto flex-grow-1" id="breadcrumbs">
+      <a href="/" aria-label="Home"><i class="fas fa-home"></i></a>
+      {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+      {% for crumb in crumbs offset: 1 %}
+        >  
+        {% if forloop.last %}
+          {{ crumb | downcase }}
+        {% else %}
+          <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}" class="text-secondary">{{ crumb | remove:'.html' | downcase }}</a>
+        {% endif %}
+      {% endfor %}
+    </p>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

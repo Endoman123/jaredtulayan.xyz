@@ -6,10 +6,12 @@
 layout: base
 ---
 {% include navbar.html %}
-<div id="header" class="my-10 container-fluid">
-  <div id="header-content" class="container pt-10 d-flex flex-column justify-content-center align-items-center">
+<div id="header" class="my-10 container">
+  <div id="header-content">
     <h1 class="display-4">{{ page.title }}</h1>
-    <p class="lead">{{ page.description }}</p>
+    {% if page.description %}
+      <p class="lead">{{ page.description }}</p>
+    {% endif %}
   </div>
 </div>
 <main id="content" class="container flex-grow-1">
