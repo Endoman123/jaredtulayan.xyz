@@ -5,3 +5,9 @@ html {
 body {
     min-height: 100vh;
 }
+
+hr {
+    border-top: 3px dotted;
+    border-bottom: 3px dotted;
+    height: 3px;
+}

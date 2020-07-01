@@ -6,13 +6,15 @@
 layout: base
 ---
 {% include navbar.html %}
-<div id="header" class="my-10 container">
-  <div id="header-content">
-    <h1 class="display-4">{{ page.title }}</h1>
-    {% if page.description %}
-      <p class="lead">{{ page.description }}</p>
-    {% endif %}
-  </div>
+<div id="header" class="container mt-10 mb-3">
+  <h1>{{ page.title }}</h1>
+  {% if page.description %}
+    <p class="lead">{{ page.description }}</p>
+  {% endif %}
+  {% if page.date %}
+    <small class="text-muted"><i class="fas fa-clock"></i> {{ page.date | date: '%Y-%m-%d' }}</small>
+  {% endif %}
+  <hr>
 </div>
 <main id="content" class="container flex-grow-1">
     {{ content }}
