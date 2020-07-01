@@ -1,8 +1,8 @@
 - name: About
-  link: /about
+  link: /about.html
 - name: Projects
   link: /projects
 - name: Resume
-  link: /resume
+  link: /assets/documents/resume.pdf
 - name: Blog
   link: /blog
