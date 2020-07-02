@@ -1,6 +1,9 @@
 <nav class="p-0 navbar navbar-expand-lg fixed-top navbar-light">
   <div class="container p-0 bg-dark">
+    <!--Navbar Brand-->
     <a class="navbar-brand bg-primary link-unstyled px-2" href="/">{{ site.title }}</a>
+    
+    <!--Breadcrumbs-->
     <p class="my-auto d-none d-sm-block flex-grow-1" id="breadcrumbs">
       <a href="/" aria-label="Home"><i class="fas fa-home"></i></a>
       {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
@@ -13,9 +16,13 @@
         {% endif %}
       {% endfor %}
     </p>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    
+    <!--Navbar Menu Toggle-->
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
     </button>
+
+    <!--Navbar Menu-->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto px-1">
         {% for item in site.data.navbar %}
