@@ -11,10 +11,13 @@ permalink: /blog/:title:output_ext
 email: jared@jaredtulayan.xyz
 phone: +1 (609) 361-4018
 telegram: Endoman123
-discord: Endoman123#7276
 github:  endoman123
 instagram:  jared.tulayan
 
+# Custom collections
+collections:
+  projects:
+    output: true
 
 # Build settings
 plugins:
@@ -46,6 +49,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      draft: true
 
 # Exclude from processing.
 exclude:
