@@ -58,3 +58,4 @@ exclude:
   - Gemfile.lock
   - .sass-cache/
   - .jekyll-cache/
+  - assets/css/*/*
