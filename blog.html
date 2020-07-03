@@ -1,6 +1,5 @@
 ---
 permalink: /blog/
-layout: page
 title: My Blog
 description: >-
   A place where I decided to write some things down.
@@ -25,8 +24,6 @@ pagination:
     {% endif %}
     {% if post.description %}
       <p>{{ post.description }}</p>
-    {% else %}
-      <p>{{ post.excerpt }}</p>
     {% endif %}
     <a href="{{ post.url }}" class="text-white">Read more -></a>
   </div>

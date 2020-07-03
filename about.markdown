@@ -1,5 +1,4 @@
 ---
-layout: page
 title: About Me
 ---
 I'm currently a student at Rutgers University, working towards a BS in Computer Science and a minor in music.

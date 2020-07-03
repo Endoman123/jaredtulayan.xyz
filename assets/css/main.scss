@@ -13,8 +13,8 @@
 
 // Custom styling
 // Base
-@import 'mixins/base/dom';
-@import 'mixins/base/classes';
+@import 'mixins/base/global';
+@import 'mixins/base/md';
 
 // Utilities
 @import 'mixins/utils/flex';

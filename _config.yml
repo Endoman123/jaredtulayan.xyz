@@ -46,10 +46,28 @@ defaults:
   -
     scope:
       path: ""
+    values:
+      layout: "default"
+      draft: true
+  -
+    scope:
+      path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: "md"
       draft: true
+  -
+    scope:
+      path: "./*.md"
+      type: "pages"
+    values:
+      layout: "md"
+  -
+    scope:
+      path: "./*.markdown"
+      type: "pages"
+    values:
+      layout: "md"
 
 # Exclude from processing.
 exclude:
