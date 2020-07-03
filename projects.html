@@ -5,4 +5,13 @@ title: My Projects
 description: >-
   I've worked on many projects: websites, games, general front-ends. I also have other projects that aren't programming.
 ---
-<p>Sorry! Nothing to see here!</p>
+<div id="projects-feed" class="row">
+  {% for item in site.projects %}
+  <div class="col-lg-4 col-sm-6 col-xs-12 px-1 pb-2">
+    <div class="std-border h-100">
+      <h4><a class="stretched-link link-unstyled" href="{% if item.repository %}{{ item.repository }}{% else %}{{ item.link }}{% endif %}">{{ item.title }}</a></h2>
+      <p>{{ item.description }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>

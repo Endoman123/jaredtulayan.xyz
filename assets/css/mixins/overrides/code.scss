@@ -1,3 +1,9 @@
+.language-plaintext {
+  background-color: rgba( $primary, .25 );
+  padding: 0.25rem;
+  color: $primary;
+}
+
 pre.highlight {
     border: 0.5rem solid $primary;
     padding: 0.5rem;

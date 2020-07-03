@@ -3,18 +3,23 @@
 # This is just to tell jekyll to compile this scss file
 ---
 
-// Bootstrap overrides
+// Bootstrap/Jekyll overrides
 @import 'mixins/overrides/variables';
 @import 'mixins/overrides/transitions';
+@import 'mixins/overrides/code';
 
 // Base Bootstrap
 @import 'bootstrap/bootstrap';
 
-// Custom stylings
-@import 'mixins/base';
-@import 'mixins/code';
-@import 'mixins/hr';
-@import 'mixins/flex';
-@import 'mixins/hero';
-@import 'mixins/footer';
-@import 'mixins/utils';
+// Custom styling
+// Base
+@import 'mixins/base/dom';
+@import 'mixins/base/classes';
+
+// Utilities
+@import 'mixins/utils/flex';
+@import 'mixins/utils/link-unstyle';
+@import 'mixins/utils/list-unstyle';
+
+// Miscellaneous
+@import 'mixins/misc/hr';
