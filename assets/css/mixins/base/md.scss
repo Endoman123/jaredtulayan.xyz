@@ -1,7 +1,15 @@
 // Markdown Formatting
 .md {
+    // Remove top margin for all first children
+    // Makes top spacing consistent
     :first-child {
         margin-top: 0 !important;
+    }
+
+    // Remove bottom margin for all last children
+    // Makes bottom spacing consistent
+    :last-child {
+        margin-bottom: 0 !important;
     }
 
     // Headings
@@ -12,6 +20,14 @@
     h5, 
     h6 {
         margin: 2rem 0;
+
+        .hanchor {
+            visibility: hidden;
+        }
+
+        &:hover .hanchor {
+            visibility: visible;
+        }
     } 
 
     // Blockquotes
