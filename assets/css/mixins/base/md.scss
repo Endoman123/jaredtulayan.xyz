@@ -6,12 +6,6 @@
         margin-top: 0 !important;
     }
 
-    // Remove bottom margin for all last children
-    // Makes bottom spacing consistent
-    :last-child {
-        margin-bottom: 0 !important;
-    }
-
     // Headings
     h1, 
     h2, 
@@ -33,14 +27,17 @@
 
     // Blockquotes
     blockquote {
-        border-top: 1px solid $primary;
-        border-bottom: 1px solid $primary;
+        border: 1px solid $primary;
         padding: 1rem;
         margin: 2rem 0;
 
         &:before {
-            content: ">";
-            margin-right: 1rem;
+            content: "$ more";
+            display: block;
+            margin-bottom: 1rem;
+            padding-bottom: 0.25rem;
+            color: #007aff;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
     }
 
@@ -56,8 +53,8 @@
     
     ol li:not(:empty):before {
         content: counter(li);
-        position: relative;
-        left: -1rem;
+        position: absolute;
+        margin-left: -1.5rem;
         color: $primary;
     }
     
@@ -67,8 +64,8 @@
     
     ul li:not(:empty):before {
         content: "-";
-        position: relative;
-        left: -1rem;
+        position: absolute;
+        margin-left: -1.5rem;
         color: $primary;
     }
 
@@ -82,5 +79,16 @@
         color: $primary;
         background-color: rgba($primary, 0.25);
         padding: 0.1rem;
+    }
+
+    // Code blocks (via indent)
+    pre {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 3rem 0;
+        padding: 1.5rem 1rem;
+        
+        code {
+            background-color: transparent;
+        }
     }
 }
