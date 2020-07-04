@@ -10,6 +10,7 @@
 		right: 1rem;
 
 		button {
+			visibility: hidden;
 			background: transparent;
 			border: 0.1rem solid $primary;
 			color: $primary;
@@ -23,6 +24,14 @@
 			&:active {
 				background: $primary;
 				color: $primary;
+			}
+		}
+	}
+
+	&:hover {
+		.toolbar {
+			button {
+				visibility: visible;
 			}
 		}
 	}
