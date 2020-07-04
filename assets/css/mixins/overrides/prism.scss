@@ -1,13 +1,31 @@
 // PrismJS style
 // Toolbar
 .code-toolbar {
-  margin: 2rem 0;
+	position: relative;
+	margin: 2rem 0;
 
-  .toolbar {
-    position: absolute;
-    bottom: -64px;
-    right: 80px;
-  }
+	.toolbar {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+
+		button {
+			background: transparent;
+			border: 0.1rem solid $primary;
+			color: $primary;
+			padding: 1rem;
+
+			&:hover {
+				background: $primary;
+				color: $body-bg;
+			}
+
+			&:active {
+				background: $primary;
+				color: $primary;
+			}
+		}
+	}
 }
 
 // Code Formatting
@@ -19,7 +37,6 @@ pre[class*="language-"] {
 	word-break: normal;
 	word-wrap: normal;
 	color: #eee;
-	background: #2f2f2f;
 	font-family: $font-family-monospace;
 	font-size: 1em;
 	line-height: 1.5em;
