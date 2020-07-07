@@ -49,7 +49,6 @@ defaults:
       path: ""
     values:
       layout: "default"
-      draft: true
   -
     scope:
       path: ""

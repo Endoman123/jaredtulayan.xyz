@@ -8,14 +8,14 @@ layout: base
 {% include navbar.html %}
 <div id="header" class="container mt-10 mb-3">
   <h1>{{ page.title }}</h1>
-  {% if page.date %}
+  {% if page.collection != "projects" and page.date %}
     <p class="text-muted"><i class="fas fa-clock"></i> {{ page.date | date: '%Y-%m-%d' }}</p>
   {% endif %}
   {% if page.tags.size > 0 %}
     <p class="text-muted mt-auto">
       {% assign tags = page.tags | sort %}
       {% for tag in tags %}
-      #{{tag}}
+        #{{tag}}
       {% endfor %}
     </p> 
   {% endif %}

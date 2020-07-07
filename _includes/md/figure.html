@@ -1,0 +1,13 @@
+{% comment %}
+Image Template
+Params:
+    - src: image source
+    - figcaption: figure caption text
+    - align: figure alignment in text body
+{% endcomment %}
+<figure class="md-figure {% if include.align %}{{ include.align | prepend: "md-figure--" }}{% endif %}">
+    <img src="{{ include.src }}" class="md-figure__image"/>
+    {% if include.figcaption %}
+        <figcaption class="md-figure__caption">{{ include.figcaption }}</figcaption>
+    {% endif %}
+</figure>
