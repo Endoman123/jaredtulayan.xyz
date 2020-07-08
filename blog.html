@@ -22,9 +22,13 @@ pagination:
         {% endfor %}
       </p> 
     {% endif %}
-    {% if post.description %}
-      <p>{{ post.description }}</p>
-    {% endif %}
+    <p>
+      {% if post.description %}
+        {{ post.description }}
+      {% else %}
+        {{ post.excerpt}}
+      {% endif %}
+    </p>
     <a href="{{ post.url }}" class="text-white">Read more -></a>
   </div>
   <hr class="my-7 separator-weak">
