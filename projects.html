@@ -7,10 +7,17 @@ description: >-
 <div id="projects-feed" class="row">
   {% for item in site.projects %}
   <div class="col-lg-4 col-sm-6 col-xs-12 px-1 pb-2">
-    <div class="std-border h-100">
-      <h4><a class="stretched-link link-unstyled" href="{% if item.repository %}{{ item.repository }}{% else %}{{ item.url }}{% endif %}">{{ item.title }}</a></h2>
-      <p>{{ item.description }}</p>
-    </div>
+    <figure class="project h-100">
+      <div class="project__thumbnail">
+        {% if item.thumbnail %}
+          <img src="{{ item.thumbnail }}" />
+        {% endif %}
+        <p>{{ item.description }}</p>
+      </div>
+      <figcaption class="project__info">
+        <a class="stretched-link link-unstyled" href="{{ item.url }}">{{ item.title }}</a>
+      </figcaption>
+    </figure>
   </div>
   {% endfor %}
 </div>
