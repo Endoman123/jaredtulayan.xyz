@@ -55,11 +55,15 @@ defaults:
       type: "posts"
     values:
       layout: "md"
-      draft: true
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "md"
   -
     scope:
       path: "./*.md"
-      type: "pages"
     values:
       layout: "md"
   -
