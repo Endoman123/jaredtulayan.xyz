@@ -1,5 +1,5 @@
 ---
 title: Pathplanner
 description: A JavaFX Frontend for mapping motion profiles
-thumbnail: 
+thumbnail: /assets/images/pathplanner.png
 ---
