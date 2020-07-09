@@ -3,9 +3,9 @@ Image Template
 Params:
     - src: image source
     - figcaption: figure caption text
-    - align: figure alignment in text body
+    - mods: modifiers
 {% endcomment %}
-<figure class="md-figure {% if include.align %}{{ include.align | prepend: "md-figure--" }}{% endif %}">
+<figure class="md-figure{% for mod in include.mods %}{{ mod | prepend: " md-figure--" }}{% endfor %}">
     <img src="{{ include.src }}" class="md-figure__image"/>
     {% if include.figcaption %}
         <figcaption class="md-figure__caption">{{ include.figcaption }}</figcaption>
