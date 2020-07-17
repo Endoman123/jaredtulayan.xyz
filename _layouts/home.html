@@ -13,7 +13,7 @@ layout: base
         {% for item in site.data.navbar %}
         <li>    
             <span class="mr-1">></span>
-            <a class="link-unstyled" href="{{ item.link }}">{{ item.name }}</a>
+            <a class="link-unstyled" href="{{ item.link }}" {% if item.newtab %}target="_blank"{% endif %}>{{ item.name }}</a>
         </li>
         {% endfor %} 
     </ul>
