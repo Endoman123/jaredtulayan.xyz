@@ -4,9 +4,11 @@ Params:
     - src: image source
     - figcaption: figure caption text
     - mods: modifiers
+    - width: image width
+    - height: image height
 {% endcomment %}
 <figure class="md-figure{% for mod in include.mods %}{{ mod | prepend: " md-figure--" }}{% endfor %}">
-    <img src="{{ include.src }}" class="md-figure__image"/>
+    <img src="{{ include.src }}" {% if include.width %}width="{{ include.width }}" {% endif %}{% if include.height %}height="{{ include.height }}" {% endif %}class="md-figure__image"/>
     {% if include.figcaption %}
         <figcaption class="md-figure__caption">{{ include.figcaption }}</figcaption>
     {% endif %}
