@@ -36,7 +36,7 @@
             display: block;
             margin-bottom: 1rem;
             padding-bottom: 0.25rem;
-            color: #007aff;
+            color: $primary;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
     }
@@ -131,12 +131,14 @@
         // Custom figure include
         .md-figure {
             &--left {
+                max-width: 33%;
                 float: left;
                 margin: 0;
                 margin-right: 1.5rem;
             }
 
             &--right {
+                max-width: 33%;
                 float: right;
                 margin: 0;
                 margin-left: 1.5rem;
