@@ -24,7 +24,7 @@
 
     <!--Navbar Menu-->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+      <div class="navbar-nav ml-auto">
         {% for item in site.data.navbar %}
           <a class="nav-item nav-link" href="{{ item.link }}" {% if item.newtab %}target="_blank"{% endif %}>{{ item.name }}</a>
         {% endfor %}  
