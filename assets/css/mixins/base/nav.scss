@@ -1,7 +1,21 @@
 // Nav classes
 // Bootstrap Nav Overrides
+.navbar-toggler {
+    line-height: inherit;
+    outline: 0;
+    border: 0 !important;
+    border-radius: 0;
+
+    &:focus {
+        outline: 0;
+        background: $primary;
+        color: $body-bg !important;
+        border: 0.1rem solid $primary !important;
+    }
+}
+
 .navbar-nav {
-    box-shadow: inset 0px 0px 0px 0.15rem $primary;
+    box-shadow: inset 0px 0px 0px 0.125rem $primary;
     background-color: $body-bg;
 
     .nav-link {
