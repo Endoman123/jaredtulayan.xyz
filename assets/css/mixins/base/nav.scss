@@ -33,11 +33,13 @@
     }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(sm) {
     .navbar-brand::before {
         content: "Jared Tulayan";
     }
+}
 
+@include media-breakpoint-up(lg) {
     .navbar-collapse {
         flex-basis: 0 !important;
     }
