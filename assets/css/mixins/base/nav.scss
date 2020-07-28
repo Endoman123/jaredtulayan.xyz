@@ -14,10 +14,6 @@
     }
 }
 
-.navbar-brand::before {
-    content: "~";
-}
-
 .navbar-nav {
     box-shadow: inset 0px 0px 0px 0.125rem $primary;
     background-color: $body-bg;
@@ -30,12 +26,6 @@
             background-color: $primary;
             color: $body-bg !important;
         }
-    }
-}
-
-@include media-breakpoint-up(sm) {
-    .navbar-brand::before {
-        content: "Jared Tulayan";
     }
 }
 
