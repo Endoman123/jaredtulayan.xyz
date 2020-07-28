@@ -30,3 +30,7 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 
 gem "jekyll-paginate-v2", "~> 3.0"
+gem "jekyll-assets"
+
+# Autoprefixer
+gem "autoprefixer-rails"

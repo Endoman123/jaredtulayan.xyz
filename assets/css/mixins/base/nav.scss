@@ -1,5 +1,9 @@
 // Nav classes
 // Bootstrap Nav Overrides
+.navbar-brand::before {
+    content: "~";
+}
+
 .navbar-nav {
     box-shadow: inset 0px 0px 0px 0.15rem $primary;
     background-color: $body-bg;
@@ -16,6 +20,10 @@
 }
 
 @include media-breakpoint-up(lg) {
+    .navbar-brand::before {
+        content: "Jared Tulayan";
+    }
+
     .navbar-collapse {
         flex-basis: 0 !important;
     }
